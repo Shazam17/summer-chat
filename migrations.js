@@ -21,7 +21,7 @@ const Message = sequelize.define('messages', {
     type: DataTypes.BOOLEAN,
   },
   user_id: {
-    type: DataTypes.STRING,
+    type: DataTypes.INTEGER,
   },
   chat_id: {
     type: DataTypes.INTEGER,
@@ -37,10 +37,10 @@ const Dialog = sequelize.define('Dialog', {
 const User_Dialog = sequelize.define('User_Dialog',{
   user_id: {
     type: DataTypes.INTEGER,
-    references: {
-      model: User,
-      key: 'id'
-    }
+    // references: {
+    //   model: User,
+    //   key: 'id'
+    // }
   },
   dialog_id: {
     type: DataTypes.INTEGER,
